@@ -1,0 +1,61 @@
+{
+  "alfredtheme" : {
+    "result" : {
+      "textSpacing" : 8,
+      "subtext" : {
+        "size" : 11,
+        "colorSelected" : "#5963C3FF",
+        "font" : "System",
+        "color" : "#A78ACBFF"
+      },
+      "shortcut" : {
+        "size" : 16,
+        "colorSelected" : "#D2945DFF",
+        "font" : "System",
+        "color" : "#DBA46FFF"
+      },
+      "backgroundSelected" : "#C3D1F0FF",
+      "text" : {
+        "size" : 20,
+        "colorSelected" : "#043132FF",
+        "font" : "System",
+        "color" : "#7B838BFF"
+      },
+      "iconPaddingHorizontal" : 13,
+      "paddingVertical" : 16,
+      "iconSize" : 32
+    },
+    "search" : {
+      "paddingVertical" : 0,
+      "background" : "#9E60B000",
+      "spacing" : 10,
+      "text" : {
+        "size" : 64,
+        "colorSelected" : "#DF6A73FF",
+        "font" : "System",
+        "color" : "#454464FF"
+      },
+      "backgroundSelected" : "#383D49FF"
+    },
+    "window" : {
+      "color" : "#EBE3FFFF",
+      "paddingHorizontal" : 128,
+      "width" : 560,
+      "borderPadding" : 12,
+      "borderColor" : "#22221D00",
+      "blur" : 40,
+      "roundness" : 6,
+      "paddingVertical" : 63
+    },
+    "credit" : "Bojan Dimovski",
+    "separator" : {
+      "color" : "#383830FF",
+      "thickness" : 0
+    },
+    "scrollbar" : {
+      "color" : "#4D5562FF",
+      "thickness" : 2
+    },
+    "name" : "One Dark"
+  }
+}

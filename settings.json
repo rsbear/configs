@@ -1,0 +1,123 @@
+{
+  "editor.fontSize": 14,
+  "editor.letterSpacing": 0.8,
+  "editor.lineHeight": 28,
+  "editor.fontFamily": "'Roboto Mono', 'Office Code Pro', Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontLigatures": true,
+  "editor.fontWeight": "300",
+  "editor.cursorWidth": 0,
+  "editor.cursorStyle": "line",
+  "editor.tabSize": 2,
+//   "editor.formatOnSave": false,
+  "editor.minimap.enabled": false,
+  "editor.wordWrap": "on",
+  "editor.cursorBlinking": "solid",
+  // "workbench.editor.showTabs": false,
+  "explorer.openEditors.visible": 0,
+  "explorer.autoReveal": false,
+  "emmet.syntaxProfiles": {
+    "javascript": "jsx"
+  },
+  "vim.highlightedyank.enable": true,
+  "vim.normalModeKeyBindings": [
+    {
+      "before": ["Tab"],
+      "commands": ["workbench.action.toggleSidebarVisibility"],
+    }
+  ],
+  "files.exclude": {
+    "**/.git": true,
+    "**/.lock": true,
+    "**/.DS_Store": true,
+    "**/node_modules": true,
+    "node_modules": true
+  },
+  "search.exclude": {
+    "**/.git": true,
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/tmp": true,
+    "node_modules": true
+  },
+  "C_Cpp.intelliSenseCacheSize": 0,
+  "[yaml]": {
+    "editor.formatOnSave": false
+  },
+//   "files.associations": {
+//     "*.js": "javascriptreact",
+//     "*.prisma": "graphql"
+//   },
+  "workbench.activityBar.visible": false,
+  "workbench.colorCustomizations": {
+    "editorCursor.foreground": "#00f1a1"
+  },
+  "window.zoomLevel": 0,
+//   "[json]": {
+//     "editor.defaultFormatter": "esbenp.prettier-vscode"
+//   },
+//   "[javascriptreact]": {
+//     "editor.defaultFormatter": "esbenp.prettier-vscode"
+//   },
+//   "[graphql]": {
+//     "editor.defaultFormatter": "esbenp.prettier-vscode",
+//     "editor.formatOnSave": true
+//   },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+//   "[jsonc]": {
+//     "editor.defaultFormatter": "esbenp.prettier-vscode"
+//   },
+//   "workbench.iconTheme": "city-lights-icons-vsc",
+//   "[javascript]": {
+//     // "editor.defaultFormatter": "vscode.typescript-language-features"
+//   },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+//   "debug.console.fontSize": 14,
+//   "terminal.integrated.fontSize": 13,
+//   "vetur.validation.template": false,
+//   "vetur.format.defaultFormatter.scss": "prettier",
+//   "vetur.format.defaultFormatter.css": "prettier",
+//   "vetur.format.defaultFormatter.js": "prettier",
+//   "eslint.validate": [
+//     "javascript",
+//     "javascriptreact",
+//     {
+//       "language": "vue",
+//       "autoFix": false
+//     },
+//   ],
+//   "eslint.autoFixOnSave": true,
+//   // "vscode-neovim.neovimPath": "/../../usr/local/bin/nvim",
+//   // "vscode-neovim.escape": "Cmd+d",
+//   "go.useLanguageServer": true,
+//   "[go]": {
+//       "editor.snippetSuggestions": "none",
+//       "editor.formatOnSave": true,
+//       "editor.codeActionsOnSave": {
+//           "source.organizeImports": true,
+//       }
+//   },
+//   "gopls": {
+//       "usePlaceholders": true, // add parameter placeholders when completing a function
+
+//       // Experimental settings
+//       "completeUnimported": true, // autocomplete unimported packages
+//       "deepCompletion": true,     // enable deep completion
+//   },
+  "go.gopath": "/Users/rsbear/go",
+  "go.toolsGoPath": "/Users/rsbear/go",
+  "[rust]": {
+    "editor.formatOnSave": true   
+  },
+  "workbench.colorTheme": "Horizon",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "prettier.packageManager": "yarn",
+  "prettier.trailingComma": "es5"
+}
