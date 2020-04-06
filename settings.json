@@ -1,10 +1,13 @@
 {
-  "editor.fontSize": 14,
-  "editor.letterSpacing": 0.8,
+  "vscode-neovim.neovimPath": "/usr/local/bin/nvim",
+  "vscode-neovim.neovimInitPath": "/Users/rsbear/.config/nvim/vscode.vim",
+  "editor.fontSize": 15,
+  // "editor.letterSpacing": 0.8,
   "editor.lineHeight": 28,
-  "editor.fontFamily": "'Roboto Mono', 'Office Code Pro', Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontFamily": "'Office Code Pro', 'Source Code Pro', 'Roboto Mono', Menlo, Monaco, 'Courier New', monospace",
   "editor.fontLigatures": true,
-  "editor.fontWeight": "300",
+  "editor.fontWeight": "400",
+  "workbench.fontAliasing": "default",
   "editor.cursorWidth": 0,
   "editor.cursorStyle": "line",
   "editor.tabSize": 2,
@@ -18,13 +21,13 @@
   "emmet.syntaxProfiles": {
     "javascript": "jsx"
   },
-  "vim.highlightedyank.enable": true,
-  "vim.normalModeKeyBindings": [
-    {
-      "before": ["Tab"],
-      "commands": ["workbench.action.toggleSidebarVisibility"],
-    }
-  ],
+  // "vim.highlightedyank.enable": true,
+  // "vim.normalModeKeyBindings": [
+  //   {
+  //     "before": ["Tab"],
+  //     "commands": ["workbench.action.toggleSidebarVisibility"],
+  //   }
+  // ],
   "files.exclude": {
     "**/.git": true,
     "**/.lock": true,
@@ -55,9 +58,14 @@
 //   "[json]": {
 //     "editor.defaultFormatter": "esbenp.prettier-vscode"
 //   },
-//   "[javascriptreact]": {
-//     "editor.defaultFormatter": "esbenp.prettier-vscode"
-//   },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
 //   "[graphql]": {
 //     "editor.defaultFormatter": "esbenp.prettier-vscode",
 //     "editor.formatOnSave": true
@@ -114,10 +122,11 @@
   "[rust]": {
     "editor.formatOnSave": true   
   },
-  "workbench.colorTheme": "Horizon",
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
   "prettier.packageManager": "yarn",
-  "prettier.trailingComma": "es5"
+  "prettier.trailingComma": "es5",
+  "editor.multiCursorModifier": "ctrlCmd",
+  "workbench.colorTheme": "Horizon"
 }
