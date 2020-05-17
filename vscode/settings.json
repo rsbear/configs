@@ -1,8 +1,7 @@
 {
   "vscode-neovim.neovimPath": "/usr/local/bin/nvim",
-  "vscode-neovim.neovimInitPath": "/Users/rsbear/.config/nvim/vscode.vim",
+  "vscode-neovim.neovimInitPath": "/Users/rsbear/.config/nvim/init.vim",
   "editor.fontSize": 15,
-  // "editor.letterSpacing": 0.8,
   "editor.lineHeight": 28,
   "editor.fontFamily": "'Office Code Pro', 'Source Code Pro', 'Roboto Mono', Menlo, Monaco, 'Courier New', monospace",
   "editor.fontLigatures": true,
@@ -11,23 +10,14 @@
   "editor.cursorWidth": 0,
   "editor.cursorStyle": "line",
   "editor.tabSize": 2,
-//   "editor.formatOnSave": false,
   "editor.minimap.enabled": false,
   "editor.wordWrap": "on",
   "editor.cursorBlinking": "solid",
-  // "workbench.editor.showTabs": false,
   "explorer.openEditors.visible": 0,
   "explorer.autoReveal": false,
   "emmet.syntaxProfiles": {
     "javascript": "jsx"
   },
-  // "vim.highlightedyank.enable": true,
-  // "vim.normalModeKeyBindings": [
-  //   {
-  //     "before": ["Tab"],
-  //     "commands": ["workbench.action.toggleSidebarVisibility"],
-  //   }
-  // ],
   "files.exclude": {
     "**/.git": true,
     "**/.lock": true,
@@ -43,14 +33,33 @@
     "node_modules": true
   },
   "C_Cpp.intelliSenseCacheSize": 0,
+  "multiCommand.commands": [
+    {
+      "command": "multiCommand.openSidebar",
+      "sequence": [
+        // "workbench.action.toggleSidebarVisibility",
+        "workbench.files.action.showActiveFileInExplorer",
+        "workbench.action.focusSideBar",
+      ]
+    },
+    {
+      "command": "multiCommand.sidebarSelect",
+      "sequence": [
+        "list.select",
+        "workbench.action.toggleSidebarVisibility",
+      ]
+    },
+    {
+      "command": "multiCommand.closeSidebar",
+      "sequence": [
+        "workbench.action.closeSidebar",
+      ]
+    }
+  ],
   "[yaml]": {
     "editor.formatOnSave": false
   },
-//   "files.associations": {
-//     "*.js": "javascriptreact",
-//     "*.prisma": "graphql"
-//   },
-  "workbench.activityBar.visible": false,
+  "workbench.activityBar.visible": true,
   "workbench.colorCustomizations": {
     "editorCursor.foreground": "#00f1a1"
   },
@@ -100,8 +109,6 @@
 //     },
 //   ],
 //   "eslint.autoFixOnSave": true,
-//   // "vscode-neovim.neovimPath": "/../../usr/local/bin/nvim",
-//   // "vscode-neovim.escape": "Cmd+d",
 //   "go.useLanguageServer": true,
 //   "[go]": {
 //       "editor.snippetSuggestions": "none",
@@ -128,5 +135,12 @@
   "prettier.packageManager": "yarn",
   "prettier.trailingComma": "es5",
   "editor.multiCursorModifier": "ctrlCmd",
-  "workbench.colorTheme": "Horizon"
+  "workbench.colorTheme": "Horizon",
+  "polacode.backgroundColor": "#ffff",
+  "polacode.shadow": "rgba(0, 0, 0, 0)",
+  "workbench.editor.showTabs": true,
+  "auto-rename-tag.activationOnLanguage": [
+    "*"
+  ],
+  "diffEditor.ignoreTrimWhitespace": false
 }
