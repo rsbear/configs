@@ -1,3 +1,8 @@
+if exists('g:vscode')
+
+set incsearch
+
+else
 syntax on
 filetype plugin on
 
@@ -17,8 +22,8 @@ set cmdheight=2
 set termguicolors
 set undodir=~/.vim/undodir
 set undofile
+set rtp+=/usr/local/opt/fzf
 
-source ~/.config/nvim/colors.vim
 
 call plug#begin('~/.local/share/nvim/plugged')
 
@@ -30,13 +35,18 @@ Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'alvan/vim-closetag'
+Plug 'evanleck/vim-svelte'
 Plug 'jiangmiao/auto-pairs'
 Plug 'fatih/vim-go'
 Plug 'tpope/vim-commentary'
-" Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
 Plug 'itchyny/vim-gitbranch'
+Plug 'ap/vim-buftabline'
 Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'airblade/vim-rooter'
 Plug 'jremmen/vim-ripgrep'
 Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
@@ -44,8 +54,14 @@ Plug 'prettier/vim-prettier', {
 
 call plug#end()
 
-command! -bang -nargs=*  All
-  \ call fzf#run(fzf#wrap({'source': 'rg --files --hidden --no-ignore-vcs --glob "!{*/node_modules/*,*/dist/*,.git/*,yarn.lock,*/.cache/*,*/.next/*,*/.DS_Store/*}"', 'options': '--expect=ctrl-t,ctrl-x,ctrl-v --multi --reverse' }))
+colorscheme dogrun
+hi Normal  guibg=NONE ctermbg=NONE
+hi Visual  guifg=none guibg=#4F517D gui=none
+hi Search  guifg=#000000 guibg=#DCA000
+hi illuminatedWord cterm=underline gui=underline
+source ~/.config/nvim/colors.vim
+source ~/.config/nvim/fzf-settings.vim
+
 
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
@@ -59,14 +75,17 @@ function! s:check_back_space() abort
 endfunction
 
 
-let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.6 } }
+
 inoremap jk <ESC>
-noremap <silent> <c-p> :All<CR>
+vnoremap < <gv
+vnoremap > >gv
+nmap <C-right> :bnext<CR>
+nmap <C-left> :bprev<CR>
+noremap <silent> <c-p> :Files<CR>
+noremap <silent> <c-f> :RG<CR>
 noremap <silent> <tab> :NERDTreeToggle<CR>
 vmap ++ <plug>NERDCommenterToggle
 nmap ++ <plug>NERDCommenterToggle
-nnoremap <silent> <Leader>gd :YcmCompleter GoTo<CR>
-nnoremap <silent> <Leader>gf :YcmCompleter FixIt<CR>
 
 " GoTo code navigation.
 nmap <silent> gd <Plug>(coc-definition)
@@ -74,12 +93,16 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
+
+
 let mapleader= " "
 let NERDTreeShowHidden=1
 let g:NERDTreeIgnore = ['^node_modules$', '^.git$']
 let NERDTreeQuitOnOpen=1
 " Go
 let g:go_fmt_command = "goimports"
+
+let g:svelte_indent_style = 0
 
 "prettier
 let g:prettier#autoformat = 0
@@ -93,21 +116,7 @@ endfunction
 autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.tsx
 autocmd BufNewFile,BufRead *.ts,*.js set filetype=typescript
 
-"hide fzf status line
-function! s:fzf_statusline()
-  " Override statusline as you like
-  highlight fzf1 ctermfg=161 ctermbg=251
-  highlight fzf2 ctermfg=23 ctermbg=251
-  highlight fzf3 ctermfg=237 ctermbg=251
-  setlocal statusline=%#fzf1#\ >\ %#fzf2#fz%#fzf3#f
-endfunction
 
-autocmd! User FzfStatusLine call <SID>fzf_statusline()
 
-"colors
-colorscheme dogrun
-hi Normal  guibg=NONE ctermbg=NONE
-hi Visual  guifg=NONE guibg=#FFFFFF gui=none
-hi Search  cterm=NONE ctermfg=white ctermbg=darkblue
-hi illuminatedWord cterm=underline gui=underline
 
+:endif
