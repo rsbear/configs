@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =4
+let g:netrw_dirhist_4='/Users/rsbear/.config/coc/extensions/node_modules/coc-graphql'
+let g:netrw_dirhist_3='/Users/rsbear/.config/coc/extensions/node_modules'
+let g:netrw_dirhist_2='/Users/rsbear/.config/coc/extensions'
+let g:netrw_dirhist_1='/Users/rsbear/.config/coc'
+let g:netrw_dirhist_0='/Users/rsbear/.config'
+let g:netrw_dirhist_9='/Users/rsbear/Desktop'
+let g:netrw_dirhist_8='/Users/rsbear'
+let g:netrw_dirhist_7='/Users/rsbear/work/kitco-video/api/src/authorize'
+let g:netrw_dirhist_6='/Users/rsbear/projects/typefeeling/app/web/node_modules/@rsbear/parmajean/dist'
+let g:netrw_dirhist_5='/Users/rsbear/projects/typefeeling/app/web/node_modules/@rsbear/parmajean'
